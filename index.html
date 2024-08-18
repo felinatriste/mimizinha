@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para minha princesa *:☆･ﾟ✧</title>
+    <link rel="shortcut icon" href="img/gatin.jfif" type="image/x-icon">
+
+    <style>
+        #imagem {
+            position: absolute;
+            top: 80px;
+            left: -100%; 
+            transition: left 3.5s ease;
+            width: 90%; 
+            max-width: 500px; 
+        }
+        
+        body {
+            background-color: rgba(252, 141, 185, 0.833);
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        button {
+            background-color: rgb(154, 34, 106);
+            border: none;
+            width: 150px;
+            height: 35px;
+            margin: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16pt;
+            color: rgba(240, 248, 255, 0.741);
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button:hover{
+            color: rgba(254, 240, 255, 0.679);
+        }
+
+        img {
+            border-radius: 10px;
+            box-shadow: rgba(93, 50, 93, 0.25) 0px 50px 100px -20px, rgba(71, 20, 68, 0.3) 0px 30px 60px -30px;
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            font-family: cursive;
+            font-size: 14pt;
+            color: rgba(210, 231, 251, 0.873);
+            text-align: center;
+            margin: 5px;
+        }
+
+        @media (max-width: 780px) {
+            #imagem {
+                top: 60px;
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #imagem {
+                top: 70px;
+                width: 70%;
+            }
+
+            div{
+                margin-top: 100px;
+            }
+
+            button {
+                width: 130px;
+                height: 35px;
+                margin-top: 50px;
+                font-size: 16pt;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="imagem">
+        <img src="img/kity.jfif" alt="Imagem de um gatinho fofo">
+        <p>Minha mimizinha eu me importo muito com você.<br>
+            Você é a garota mais doce e incrível desse mundo.<br>
+            Eu te amo muito muito muito!!!
+        </p>
+    </div>
+
+    <button onclick="animarImagem()">Clique</button>
+
+    <script>
+        var imagemVisivel = false;
+
+        function animarImagem() {
+            var imagem = document.getElementById("imagem");
+            if (imagemVisivel) {
+                imagem.style.left = "-300%"; 
+            } else {
+                imagem.style.left = "15%"; 
+            }
+            imagemVisivel = !imagemVisivel; 
+        }
+    </script>
+
+</body>
+</html>
